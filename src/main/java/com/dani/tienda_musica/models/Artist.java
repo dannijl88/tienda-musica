@@ -1,5 +1,6 @@
 package com.dani.tienda_musica.models;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -28,6 +29,7 @@ public class Artist {
     private String band;
     private String instrument;
 
+    @JsonManagedReference
     @OneToMany(mappedBy = "artist")
     private List<Album> albums;
 

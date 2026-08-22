@@ -21,7 +21,7 @@ public class AlbumService {
         return repository.findAll();
     }
 
-    public Album getById(Long id){
+    public Album getAlbumById(Long id){
         return repository.findById(id).orElseThrow();
     }
 

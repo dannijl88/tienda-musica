@@ -1,5 +1,6 @@
 package com.dani.tienda_musica.models;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -33,5 +34,6 @@ public class Album {
 
     @ManyToOne
     @JoinColumn(name = "artist_id")
+    @JsonBackReference
     private Artist artist;
 }
